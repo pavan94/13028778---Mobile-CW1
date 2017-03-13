@@ -7,8 +7,12 @@
 //
 
 import UIKit
+import AVFoundation
+import AudioToolbox
 
 class ViewController: UIViewController {
+    
+    var audioPlayer = AVAudioPlayer()
     
     // Buttons
     @IBOutlet weak var Button0: UIButton!
@@ -31,14 +35,12 @@ class ViewController: UIViewController {
 
     override func viewDidLoad() {
         super.viewDidLoad()
-        // Do any additional setup after loading the view, typically from a nib.
         
         Randomize()
     }
 
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()
-        // Dispose of any resources that can be recreated.
     }
     
     // Function to generate and randomize questions
@@ -305,6 +307,7 @@ class ViewController: UIViewController {
         }
     }
     
+    //Functions to Hide/UnHide buttons
     
     func Hide() {
         
@@ -319,14 +322,37 @@ class ViewController: UIViewController {
         
     }
 
-    
+    //Number button actions
     
     @IBAction func B0Action(_ sender: AnyObject) {
         
         if Answer == "0" {
+            // Set the sound file name & extension
+            let alertSound = URL(fileURLWithPath: Bundle.main.path(forResource: "correct", ofType: "mp3")!)
+            
+            do {
+                // Preperation
+                try AVAudioSession.sharedInstance().setCategory(AVAudioSessionCategoryPlayback)
+            } catch _ {
+            }
+            do {
+                try AVAudioSession.sharedInstance().setActive(true)
+            } catch _ {
+            }
+            
+            // Play the sound
+            do {
+                audioPlayer = try AVAudioPlayer(contentsOf: alertSound)
+            } catch _{
+            }
+            
+            audioPlayer.prepareToPlay()
+            audioPlayer.play()
             self.performSegue(withIdentifier: "correctSegue", sender: nil)
         }
         else {
+            //Vibrate Device when incorrect answer is selected by user
+            AudioServicesPlaySystemSound(SystemSoundID(kSystemSoundID_Vibrate))
             self.performSegue(withIdentifier: "incorrectSegue", sender: nil)
         }
 
@@ -335,9 +361,31 @@ class ViewController: UIViewController {
     @IBAction func B1Action(_ sender: AnyObject) {
         
         if Answer == "1" {
+            // Set the sound file name & extension
+            let alertSound = URL(fileURLWithPath: Bundle.main.path(forResource: "correct", ofType: "mp3")!)
+            
+            do {
+                // Preperation
+                try AVAudioSession.sharedInstance().setCategory(AVAudioSessionCategoryPlayback)
+            } catch _ {
+            }
+            do {
+                try AVAudioSession.sharedInstance().setActive(true)
+            } catch _ {
+            }
+            
+            // Play the sound
+            do {
+                audioPlayer = try AVAudioPlayer(contentsOf: alertSound)
+            } catch _{
+            }
+            
+            audioPlayer.prepareToPlay()
+            audioPlayer.play()
             self.performSegue(withIdentifier: "correctSegue", sender: nil)
         }
         else {
+            AudioServicesPlaySystemSound(SystemSoundID(kSystemSoundID_Vibrate))
             self.performSegue(withIdentifier: "incorrectSegue", sender: nil)
         }
 
@@ -346,9 +394,31 @@ class ViewController: UIViewController {
     @IBAction func B2Action(_ sender: AnyObject) {
         
         if Answer == "2" {
+            // Set the sound file name & extension
+            let alertSound = URL(fileURLWithPath: Bundle.main.path(forResource: "correct", ofType: "mp3")!)
+            
+            do {
+                // Preperation
+                try AVAudioSession.sharedInstance().setCategory(AVAudioSessionCategoryPlayback)
+            } catch _ {
+            }
+            do {
+                try AVAudioSession.sharedInstance().setActive(true)
+            } catch _ {
+            }
+            
+            // Play the sound
+            do {
+                audioPlayer = try AVAudioPlayer(contentsOf: alertSound)
+            } catch _{
+            }
+            
+            audioPlayer.prepareToPlay()
+            audioPlayer.play()
             self.performSegue(withIdentifier: "correctSegue", sender: nil)
         }
         else {
+            AudioServicesPlaySystemSound(SystemSoundID(kSystemSoundID_Vibrate))
             self.performSegue(withIdentifier: "incorrectSegue", sender: nil)
         }
 
@@ -357,9 +427,31 @@ class ViewController: UIViewController {
     @IBAction func B3Action(_ sender: AnyObject) {
         
         if Answer == "3" {
+            // Set the sound file name & extension
+            let alertSound = URL(fileURLWithPath: Bundle.main.path(forResource: "correct", ofType: "mp3")!)
+            
+            do {
+                // Preperation
+                try AVAudioSession.sharedInstance().setCategory(AVAudioSessionCategoryPlayback)
+            } catch _ {
+            }
+            do {
+                try AVAudioSession.sharedInstance().setActive(true)
+            } catch _ {
+            }
+            
+            // Play the sound
+            do {
+                audioPlayer = try AVAudioPlayer(contentsOf: alertSound)
+            } catch _{
+            }
+            
+            audioPlayer.prepareToPlay()
+            audioPlayer.play()
             self.performSegue(withIdentifier: "correctSegue", sender: nil)
         }
         else {
+            AudioServicesPlaySystemSound(SystemSoundID(kSystemSoundID_Vibrate))
             self.performSegue(withIdentifier: "incorrectSegue", sender: nil)
         }
 
@@ -368,9 +460,31 @@ class ViewController: UIViewController {
     @IBAction func B4Action(_ sender: AnyObject) {
         
         if Answer == "4" {
+            // Set the sound file name & extension
+            let alertSound = URL(fileURLWithPath: Bundle.main.path(forResource: "correct", ofType: "mp3")!)
+            
+            do {
+                // Preperation
+                try AVAudioSession.sharedInstance().setCategory(AVAudioSessionCategoryPlayback)
+            } catch _ {
+            }
+            do {
+                try AVAudioSession.sharedInstance().setActive(true)
+            } catch _ {
+            }
+            
+            // Play the sound
+            do {
+                audioPlayer = try AVAudioPlayer(contentsOf: alertSound)
+            } catch _{
+            }
+            
+            audioPlayer.prepareToPlay()
+            audioPlayer.play()
             self.performSegue(withIdentifier: "correctSegue", sender: nil)
         }
         else {
+            AudioServicesPlaySystemSound(SystemSoundID(kSystemSoundID_Vibrate))
             self.performSegue(withIdentifier: "incorrectSegue", sender: nil)
         }
 
@@ -379,9 +493,31 @@ class ViewController: UIViewController {
     @IBAction func B5Action(_ sender: AnyObject) {
         
         if Answer == "5" {
+            // Set the sound file name & extension
+            let alertSound = URL(fileURLWithPath: Bundle.main.path(forResource: "correct", ofType: "mp3")!)
+            
+            do {
+                // Preperation
+                try AVAudioSession.sharedInstance().setCategory(AVAudioSessionCategoryPlayback)
+            } catch _ {
+            }
+            do {
+                try AVAudioSession.sharedInstance().setActive(true)
+            } catch _ {
+            }
+            
+            // Play the sound
+            do {
+                audioPlayer = try AVAudioPlayer(contentsOf: alertSound)
+            } catch _{
+            }
+            
+            audioPlayer.prepareToPlay()
+            audioPlayer.play()
             self.performSegue(withIdentifier: "correctSegue", sender: nil)
         }
         else {
+            AudioServicesPlaySystemSound(SystemSoundID(kSystemSoundID_Vibrate))
             self.performSegue(withIdentifier: "incorrectSegue", sender: nil)
         }
 
@@ -390,9 +526,31 @@ class ViewController: UIViewController {
     @IBAction func B6Action(_ sender: AnyObject) {
         
         if Answer == "6" {
+            // Set the sound file name & extension
+            let alertSound = URL(fileURLWithPath: Bundle.main.path(forResource: "correct", ofType: "mp3")!)
+            
+            do {
+                // Preperation
+                try AVAudioSession.sharedInstance().setCategory(AVAudioSessionCategoryPlayback)
+            } catch _ {
+            }
+            do {
+                try AVAudioSession.sharedInstance().setActive(true)
+            } catch _ {
+            }
+            
+            // Play the sound
+            do {
+                audioPlayer = try AVAudioPlayer(contentsOf: alertSound)
+            } catch _{
+            }
+            
+            audioPlayer.prepareToPlay()
+            audioPlayer.play()
             self.performSegue(withIdentifier: "correctSegue", sender: nil)
         }
         else {
+            AudioServicesPlaySystemSound(SystemSoundID(kSystemSoundID_Vibrate))
             self.performSegue(withIdentifier: "incorrectSegue", sender: nil)
         }
 
@@ -401,9 +559,31 @@ class ViewController: UIViewController {
     @IBAction func B7Action(_ sender: AnyObject) {
         
         if Answer == "7" {
+            // Set the sound file name & extension
+            let alertSound = URL(fileURLWithPath: Bundle.main.path(forResource: "correct", ofType: "mp3")!)
+            
+            do {
+                // Preperation
+                try AVAudioSession.sharedInstance().setCategory(AVAudioSessionCategoryPlayback)
+            } catch _ {
+            }
+            do {
+                try AVAudioSession.sharedInstance().setActive(true)
+            } catch _ {
+            }
+            
+            // Play the sound
+            do {
+                audioPlayer = try AVAudioPlayer(contentsOf: alertSound)
+            } catch _{
+            }
+            
+            audioPlayer.prepareToPlay()
+            audioPlayer.play()
             self.performSegue(withIdentifier: "correctSegue", sender: nil)
         }
         else {
+            AudioServicesPlaySystemSound(SystemSoundID(kSystemSoundID_Vibrate))
             self.performSegue(withIdentifier: "incorrectSegue", sender: nil)
         }
 
@@ -412,9 +592,31 @@ class ViewController: UIViewController {
     @IBAction func B8Action(_ sender: AnyObject) {
         
         if Answer == "8" {
+            // Set the sound file name & extension
+            let alertSound = URL(fileURLWithPath: Bundle.main.path(forResource: "correct", ofType: "mp3")!)
+            
+            do {
+                // Preperation
+                try AVAudioSession.sharedInstance().setCategory(AVAudioSessionCategoryPlayback)
+            } catch _ {
+            }
+            do {
+                try AVAudioSession.sharedInstance().setActive(true)
+            } catch _ {
+            }
+            
+            // Play the sound
+            do {
+                audioPlayer = try AVAudioPlayer(contentsOf: alertSound)
+            } catch _{
+            }
+            
+            audioPlayer.prepareToPlay()
+            audioPlayer.play()
             self.performSegue(withIdentifier: "correctSegue", sender: nil)
         }
         else {
+            AudioServicesPlaySystemSound(SystemSoundID(kSystemSoundID_Vibrate))
             self.performSegue(withIdentifier: "incorrectSegue", sender: nil)
         }
 
@@ -423,14 +625,38 @@ class ViewController: UIViewController {
     @IBAction func B9Action(_ sender: AnyObject) {
         
         if Answer == "9" {
+            // Set the sound file name & extension
+            let alertSound = URL(fileURLWithPath: Bundle.main.path(forResource: "correct", ofType: "mp3")!)
+            
+            do {
+                // Preperation
+                try AVAudioSession.sharedInstance().setCategory(AVAudioSessionCategoryPlayback)
+            } catch _ {
+            }
+            do {
+                try AVAudioSession.sharedInstance().setActive(true)
+            } catch _ {
+            }
+            
+            // Play the sound
+            do {
+                audioPlayer = try AVAudioPlayer(contentsOf: alertSound)
+            } catch _{
+            }
+            
+            audioPlayer.prepareToPlay()
+            audioPlayer.play()
             self.performSegue(withIdentifier: "correctSegue", sender: nil)
         }
         else {
+            AudioServicesPlaySystemSound(SystemSoundID(kSystemSoundID_Vibrate))
             self.performSegue(withIdentifier: "incorrectSegue", sender: nil)
         }
 
     }
     
+    
+    // Next button action
     
     @IBAction func Next(_ sender: AnyObject) {
         
