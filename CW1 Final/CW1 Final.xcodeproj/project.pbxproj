@@ -32,6 +32,8 @@
 		D7866EC41E6D969B00D9C79B /* thumbs_up.png in Resources */ = {isa = PBXBuildFile; fileRef = D7866EB41E6D969B00D9C79B /* thumbs_up.png */; };
 		D7866ED01E6DA66A00D9C79B /* DraggedImageView.swift in Sources */ = {isa = PBXBuildFile; fileRef = D7866ECF1E6DA66A00D9C79B /* DraggedImageView.swift */; };
 		D7866ED21E6DABEC00D9C79B /* Tryagain.2.png in Resources */ = {isa = PBXBuildFile; fileRef = D7866ED11E6DABEC00D9C79B /* Tryagain.2.png */; };
+		D7A7E5EF1E784BB700AFD3A7 /* WellDoneViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D7A7E5EE1E784BB700AFD3A7 /* WellDoneViewController.swift */; };
+		D7A7E5F11E784D2600AFD3A7 /* WrongViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D7A7E5F01E784D2600AFD3A7 /* WrongViewController.swift */; };
 		D7C6069B1E76B56F000EB37A /* correct.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = D7C6069A1E76B56F000EB37A /* correct.mp3 */; };
 /* End PBXBuildFile section */
 
@@ -84,6 +86,8 @@
 		D7866EB41E6D969B00D9C79B /* thumbs_up.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = thumbs_up.png; path = ../../images/thumbs_up.png; sourceTree = "<group>"; };
 		D7866ECF1E6DA66A00D9C79B /* DraggedImageView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DraggedImageView.swift; sourceTree = "<group>"; };
 		D7866ED11E6DABEC00D9C79B /* Tryagain.2.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = Tryagain.2.png; path = ../../../../../../Downloads/Tryagain.2.png; sourceTree = "<group>"; };
+		D7A7E5EE1E784BB700AFD3A7 /* WellDoneViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = WellDoneViewController.swift; sourceTree = "<group>"; };
+		D7A7E5F01E784D2600AFD3A7 /* WrongViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = WrongViewController.swift; sourceTree = "<group>"; };
 		D7C6069A1E76B56F000EB37A /* correct.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; name = correct.mp3; path = ../../../../../../Desktop/correct.mp3; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -155,6 +159,8 @@
 				D7866E741E6D962200D9C79B /* AppDelegate.swift */,
 				D7866E761E6D962200D9C79B /* ViewController.swift */,
 				D7866ECF1E6DA66A00D9C79B /* DraggedImageView.swift */,
+				D7A7E5EE1E784BB700AFD3A7 /* WellDoneViewController.swift */,
+				D7A7E5F01E784D2600AFD3A7 /* WrongViewController.swift */,
 				D7866E781E6D962200D9C79B /* Main.storyboard */,
 				D7866E7E1E6D962200D9C79B /* Assets.xcassets */,
 				D7866E801E6D962200D9C79B /* LaunchScreen.storyboard */,
@@ -338,7 +344,9 @@
 			files = (
 				D7866E771E6D962200D9C79B /* ViewController.swift in Sources */,
 				D7866ED01E6DA66A00D9C79B /* DraggedImageView.swift in Sources */,
+				D7A7E5EF1E784BB700AFD3A7 /* WellDoneViewController.swift in Sources */,
 				D7866E7D1E6D962200D9C79B /* CW1_Final.xcdatamodeld in Sources */,
+				D7A7E5F11E784D2600AFD3A7 /* WrongViewController.swift in Sources */,
 				D7866E751E6D962200D9C79B /* AppDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

@@ -181,10 +181,10 @@
             </objects>
             <point key="canvasLocation" x="149.59999999999999" y="138.98050974512745"/>
         </scene>
-        <!--View Controller-->
+        <!--Well Done View Controller-->
         <scene sceneID="Foz-3V-Bnp">
             <objects>
-                <viewController id="VG7-Xi-mxJ" sceneMemberID="viewController">
+                <viewController id="VG7-Xi-mxJ" customClass="WellDoneViewController" customModule="CW1_Final" customModuleProvider="target" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="plT-wi-l90"/>
                         <viewControllerLayoutGuide type="bottom" id="zS3-IS-zqL"/>
@@ -197,7 +197,7 @@
                                 <rect key="frame" x="6" y="85" width="363" height="64"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <fontDescription key="fontDescription" name="MarkerFelt-Wide" family="Marker Felt" pointSize="72"/>
-                                <color key="textColor" red="0.0" green="1" blue="0.20000000000000001" alpha="1" colorSpace="calibratedRGB"/>
+                                <color key="textColor" red="0.0" green="0.40000000000000002" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                                 <nil key="highlightedColor"/>
                             </label>
                             <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="star_kids.png" translatesAutoresizingMaskIntoConstraints="NO" id="Lih-fg-Sqc">
@@ -243,15 +243,18 @@
                         </subviews>
                         <color key="backgroundColor" red="0.40000000000000002" green="0.59999999999999998" blue="1" alpha="1" colorSpace="calibratedRGB"/>
                     </view>
+                    <connections>
+                        <outlet property="thumbsup" destination="Aoe-Nk-Vlj" id="cYu-Mt-DN3"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="SRD-cO-b0p" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="1026" y="139"/>
         </scene>
-        <!--View Controller-->
+        <!--Wrong View Controller-->
         <scene sceneID="ZGl-19-Zwn">
             <objects>
-                <viewController id="JxH-wh-IqD" sceneMemberID="viewController">
+                <viewController id="JxH-wh-IqD" customClass="WrongViewController" customModule="CW1_Final" customModuleProvider="target" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="gkY-c5-JdT"/>
                         <viewControllerLayoutGuide type="bottom" id="llg-MP-7As"/>
@@ -282,6 +285,9 @@
                         </subviews>
                         <color key="backgroundColor" red="0.40000000000000002" green="0.59999999999999998" blue="1" alpha="1" colorSpace="calibratedRGB"/>
                     </view>
+                    <connections>
+                        <outlet property="tryagain" destination="6c6-Is-4rC" id="LFt-ca-xv9"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="oD1-5r-Suj" sceneMemberID="firstResponder"/>
             </objects>

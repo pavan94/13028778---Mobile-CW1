@@ -43,6 +43,23 @@ class ViewController: UIViewController {
         super.didReceiveMemoryWarning()
     }
     
+    override func viewWillAppear(_ animated: Bool) {
+        super.viewWillAppear(animated)
+        
+        QuestionLabel.center.x  -= view.bounds.width
+        
+    }
+    
+    override func viewDidAppear(_ animated: Bool) {
+        super.viewDidAppear(animated)
+        
+        UIView.animate(withDuration: 0.5) {
+            self.QuestionLabel.center.x += self.view.bounds.width
+        }
+    }
+
+
+    
     // Function to generate and randomize questions
     func Randomize(){
         var RandomNumber = arc4random() % 15
