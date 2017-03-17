@@ -12,9 +12,10 @@ import AudioToolbox
 
 class ViewController: UIViewController {
     
+    //Instance of AVAudioPlayer class
     var audioPlayer = AVAudioPlayer()
     
-    // Buttons
+    //Buttons
     @IBOutlet weak var Button0: UIButton!
     @IBOutlet weak var Button1: UIButton!
     @IBOutlet weak var Button2: UIButton!
@@ -27,7 +28,7 @@ class ViewController: UIViewController {
     @IBOutlet weak var Button9: UIButton!
     @IBOutlet weak var Next: UIButton!
     
-    // Labels
+    //Labels
     @IBOutlet weak var QuestionLabel: UILabel!
     
     var Answer = String()
@@ -46,6 +47,7 @@ class ViewController: UIViewController {
     override func viewWillAppear(_ animated: Bool) {
         super.viewWillAppear(animated)
         
+        //Send label to outside of view
         QuestionLabel.center.x  -= view.bounds.width
         
     }
@@ -62,6 +64,8 @@ class ViewController: UIViewController {
     
     // Function to generate and randomize questions
     func Randomize(){
+        
+        //arc4Random - Generate random number
         var RandomNumber = arc4random() % 15
         RandomNumber += 1
         
@@ -131,7 +135,6 @@ class ViewController: UIViewController {
             Answer = "9"
             
             break
-            
         case 5:
             
             QuestionLabel.text = "4 + 3 = ?"
@@ -148,7 +151,6 @@ class ViewController: UIViewController {
             Answer = "7"
             
             break
-            
         case 6:
             
             QuestionLabel.text = "3 + 2 = ?"
@@ -165,7 +167,6 @@ class ViewController: UIViewController {
             Answer = "5"
             
             break
-            
         case 7:
             
             QuestionLabel.text = "5 + 2 = ?"
@@ -182,7 +183,6 @@ class ViewController: UIViewController {
             Answer = "7"
             
             break
-            
         case 8:
             
             QuestionLabel.text = "1 + 1 = ?"
@@ -199,7 +199,6 @@ class ViewController: UIViewController {
             Answer = "2"
             
             break
-            
         case 9:
             
             QuestionLabel.text = "0 + 6 = ?"
@@ -216,7 +215,6 @@ class ViewController: UIViewController {
             Answer = "6"
             
             break
-            
         case 10:
             
             QuestionLabel.text = "4 + 4 = ?"
@@ -233,7 +231,6 @@ class ViewController: UIViewController {
             Answer = "8"
             
             break
-            
         case 11:
             
             QuestionLabel.text = "5 + 2 = ?"
@@ -250,7 +247,6 @@ class ViewController: UIViewController {
             Answer = "7"
             
             break
-            
         case 12:
             
             QuestionLabel.text = "9 + 0 = ?"
@@ -267,7 +263,6 @@ class ViewController: UIViewController {
             Answer = "9"
             
             break
-            
         case 13:
             
             QuestionLabel.text = "7 + 2  = ?"
@@ -284,7 +279,6 @@ class ViewController: UIViewController {
             Answer = "9"
             
             break
-            
         case 14:
             
             QuestionLabel.text = "8 + 0 = ?"
@@ -301,7 +295,6 @@ class ViewController: UIViewController {
             Answer = "8"
             
             break
-            
         case 15:
             
             QuestionLabel.text = "2 + 6 = ?"
@@ -339,16 +332,16 @@ class ViewController: UIViewController {
         
     }
 
-    //Number button actions
+    //Buttons Actions
     
     @IBAction func B0Action(_ sender: AnyObject) {
         
         if Answer == "0" {
-            // Set the sound file name & extension
+            //Set the sound file name & extension
             let alertSound = URL(fileURLWithPath: Bundle.main.path(forResource: "correct", ofType: "mp3")!)
             
             do {
-                // Preperation
+                //Preperation
                 try AVAudioSession.sharedInstance().setCategory(AVAudioSessionCategoryPlayback)
             } catch _ {
             }
@@ -357,7 +350,7 @@ class ViewController: UIViewController {
             } catch _ {
             }
             
-            // Play the sound
+            //Play the sound
             do {
                 audioPlayer = try AVAudioPlayer(contentsOf: alertSound)
             } catch _{
@@ -365,11 +358,13 @@ class ViewController: UIViewController {
             
             audioPlayer.prepareToPlay()
             audioPlayer.play()
+            //Navigate to correct answer view
             self.performSegue(withIdentifier: "correctSegue", sender: nil)
         }
         else {
             //Vibrate Device when incorrect answer is selected by user
             AudioServicesPlaySystemSound(SystemSoundID(kSystemSoundID_Vibrate))
+            //Navigate to incorrect answer view
             self.performSegue(withIdentifier: "incorrectSegue", sender: nil)
         }
 
@@ -625,7 +620,7 @@ class ViewController: UIViewController {
             // Play the sound
             do {
                 audioPlayer = try AVAudioPlayer(contentsOf: alertSound)
-            } catch _{
+            } catch _ {
             }
             
             audioPlayer.prepareToPlay()
@@ -642,7 +637,7 @@ class ViewController: UIViewController {
     @IBAction func B9Action(_ sender: AnyObject) {
         
         if Answer == "9" {
-            // Set the sound file name & extension
+            // Set the sound file name & extension 
             let alertSound = URL(fileURLWithPath: Bundle.main.path(forResource: "correct", ofType: "mp3")!)
             
             do {
@@ -673,7 +668,7 @@ class ViewController: UIViewController {
     }
     
     
-    // Next button action
+    //Next Button Action
     
     @IBAction func Next(_ sender: AnyObject) {
         

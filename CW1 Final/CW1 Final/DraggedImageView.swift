@@ -26,13 +26,4 @@ class DraggedImageView: UIImageView {
         
         self.center = CGPoint(x: self.center.x+dx, y: self.center.y+dy)
     }
-
-    /*
-    // Only override draw() if you perform custom drawing.
-    // An empty implementation adversely affects performance during animation.
-    override func draw(_ rect: CGRect) {
-        // Drawing code
-    }
-    */
-
 }
